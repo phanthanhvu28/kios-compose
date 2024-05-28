@@ -1,0 +1,14 @@
+version: '3'
+services:
+  kios-api:
+    image: 'itlvupt/kios-api:0.0.2'
+    container_name: 'kios-api'
+    ports:
+      - '6001:80'
+    environment:
+      PROJECT_NAME: WebApi
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: 'http://+'     
+      ConnectionStrings__MySql__Kios: 'server=host.docker.internal;database=local_kios;user=root;password=my-secret-pw'
+      AdminConfiguration__PageTitle: 'kios-api'      
+      AdminConfiguration__ApiBaseUrl: http://host.docker.internal:6001         
