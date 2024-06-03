@@ -11,4 +11,9 @@ services:
       ASPNETCORE_URLS: 'http://+'     
       ConnectionStrings__MySql__Kios: 'server=host.docker.internal;database=local_kios;user=root;password=my-secret-pw'
       AdminConfiguration__PageTitle: 'kios-api'      
-      AdminConfiguration__ApiBaseUrl: http://host.docker.internal:6001         
+      AdminConfiguration__ApiBaseUrl: http://host.docker.internal:6001        
+  kios-angular:
+    image: itlvupt/kios-angular:0.0.3
+    container_name: 'kios-angular'
+    ports:
+      - 4202:80 
