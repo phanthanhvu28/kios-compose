@@ -1,7 +1,7 @@
 version: '3'
 services:
   kios-api:
-    image: 'itlvupt/kios-api:0.0.2'
+    image: 'itlvupt/kios-api:0.0.6'
     container_name: 'kios-api'
     ports:
       - '6001:80'
@@ -13,7 +13,7 @@ services:
       AdminConfiguration__PageTitle: 'kios-api'      
       AdminConfiguration__ApiBaseUrl: http://host.docker.internal:6001        
   kios-angular:
-    image: itlvupt/kios-angular:0.0.3
+    image: itlvupt/kios-angular:0.0.8
     container_name: 'kios-angular'
     ports:
       - 4202:80 
